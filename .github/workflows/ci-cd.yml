@@ -19,13 +19,16 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
+        working-directory: ./CalculatorApp
         run: npm install
 
       - name: Build React app
+        working-directory: ./CalculatorApp
         run: npm run build
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
       - name: Build Docker image
+        working-directory: ./CalculatorApp
         run: docker build -t my-react-app .
