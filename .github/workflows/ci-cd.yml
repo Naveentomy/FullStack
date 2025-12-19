@@ -40,5 +40,5 @@ jobs:
       - name: Build and Push Docker image
         working-directory: ./CalculatorApp
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/my-app:latest .
-          docker push ${{ secrets.DOCKER_USERNAME }}/my-app:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/naveeemn-app:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/naveeemn-app:latest
